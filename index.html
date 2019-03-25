@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+	<title>Nav_Bar</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<div class="container">	
+<div id="nav_wrapper">
+
+<nav>
+<a href="#"><i class="fa fa-home"></i>Home</a>
+<a href="#about"><i class="fa fa-handshake-o"></i>About</a>
+<a href="#"><i class="fa fa-briefcase"></i>Store</a>
+<a href="#"><i class="fa fa-envelope-o"></i>Contact</a>
+</nav>
+
+
+
+<div class="nav_icon">
+<div class="logo">
+<img src="images/mlogo_blck.png" alt="logo" width="100"/>
+</div>
+<div id="tgle_btn">
+<div id="bar_container">
+  <div class="bar1"></div>
+  <div class="bar2"></div>
+  <div class="bar3"></div>
+</div>
+</div>
+</div>
+</div>
+
+<!--revel area-->
+<div id="menubg">
+<div class="mobile_nav">
+<div class="logo">
+<img src="images/mlogo_white.png" alt="logo" width="100" class="mob_logo"/>
+</div>
+<div id="tgle_btn">
+<div id="mobile_bar">
+  <div class="bar1"></div>
+  <div class="bar2"></div>
+  <div class="bar3"></div>
+</div>
+</div>
+</div>
+<div id="menu_list">
+<ul>
+<li><a href="#"><div class="link_area"><i class="fa fa-home"></i></div>Home</a></li>
+<li><a href="#"><div class="link_area"><i class="fa fa-handshake-o"></i></div>About</a></li>
+<li><a href="#"><div class="link_area"><i class="fa fa-briefcase"></i></div>Store</a></li>
+<li><a href="#"><div class="link_area"><i class="fa fa-envelope-o"></i></div>Contact</a></li>
+</ul>
+</div>
+</div>
+
+
+<!--banner area-->
+<div class="banner">
+<div class="hero_left">
+<div class="cntwrp">
+<h1>Hey!</h1>
+<h2>I am <span class="name">Daniel D'souza</span></h2>
+<div class="dscptn">
+<p>Web Developer</p>
+<p>since 2017 - Present</p>
+</div>
+
+<div class="folio">
+<a href="#">LoOK MY PORTFOLIO <i class="fa fa-briefcase"></i></a>
+</div>
+
+
+</div>
+
+</div>
+<div class="hero_right">
+
+</div>
+<div style="clear:both;"></div>
+</div>
+
+
+<!--About us-->
+<div class="abt_wrp" id="about">
+<h1>About</h1>
+<p>Lorem Ipsum is simply dummy text of the printing and typesetting
+industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+<div style="clear:both;"></div>
+
+</div>
+
+
+
+
+
+</div>
+
+<script>
+var nav=document.getElementById("bar_container");/**menu icon**/
+var mbar=document.getElementById("mobile_bar");/*mobile bar**/
+var lst=document.getElementById("menu_list");/**menu list**/
+var mbg=document.getElementById("menubg");/**menu list**/
+var dm=document.getElementById("tgle_btn");/**menu show & hide**/
+var nwrp=document.getElementById("nav_wrapper");
+
+nav.addEventListener("click", menu);
+dm.addEventListener("click", reveal);
+mbar.addEventListener("click", unreveal);
+
+function menu() {
+    nav.classList.toggle("change");
+}
+
+
+function reveal() 
+
+{
+
+mbg.style.left = "0";
+nwrp.style.display = "none";
+mbg.style.display = "block";
+mbg.style.opacity = "1";
+/*if (mbg.style.display === "block") 
+{
+mbg.style.display = "none";
+} 
+else 
+{
+mbg.style.display = "block";
+mbg.style.left = "0";
+mbg.style.opacity = "1";
+nwrp.style.display = "none";
+}*/
+}
+
+function unreveal() 
+{
+mbg.style.left = "-400px";
+mbg.style.opacity= "0";
+nwrp.style.display = "block";
+}
+
+</script>
+
+</body>
+</html>
